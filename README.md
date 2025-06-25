@@ -8,12 +8,12 @@ This project demonstrates the development of a **Line Follower Robot** as part o
 
 The Arduino source code is organized into two main files:
 
-- `motors.ino`: Implements basic motor control (Hardware Challenge #2).
-- `p_controller.ino`: Implements the proportional control logic for line following (Hardware Challenge #3).
+- `motors.ino`: Implements basic motor control (#2).
+- `p_controller.ino`: Implements the proportional control logic for line following (#3).
 
 ---
 
-## 🧰 Hardware Challenge #0: Component Acquisition
+## 🧰 #0: Component Acquisition
 
 All essential electronic and mechanical components required to build the robot were procured:
 
@@ -28,11 +28,10 @@ All essential electronic and mechanical components required to build the robot w
 - USB cable for Arduino programming  
 - Jumper wires, screws, and bolts  
 
-![Hardware Challenge 0](images/hardware-challenge-0.jpg)
 
 ---
 
-## 🧠 Hardware Challenge #1: Environmental Sensing
+## 🧠 #1: Environmental Sensing
 
 The robot uses 5 TCRT5000 infrared sensors to detect the contrast between a black line and the white floor. Each sensor setup includes:
 
@@ -47,12 +46,10 @@ The analog signal from each sensor is read using `analogRead()` on the Arduino. 
 
 These values help determine the presence and position of the line. The LED visually indicates detection — ON for black and OFF for white.
 
-📽️ **Video Demonstration:**  
-[![Hardware Challenge 1](images/hardware-challenge-1.png)](https://youtu.be/YxFP9dMudcE)
 
 ---
 
-## 🛞 Hardware Challenge #2: Controlled Movement
+## 🛞 #2: Controlled Movement
 
 Motor control is handled through the L298N dual H-bridge driver connected to the Arduino. Each side of the robot consists of two motors wired in parallel, meaning:
 
@@ -62,12 +59,9 @@ Motor control is handled through the L298N dual H-bridge driver connected to the
 
 An interesting observation: when manually rotating one motor, the paired motor moves due to back EMF, demonstrating electrical and mechanical coupling.
 
-📽️ **Video Demonstration:**  
-[![Hardware Challenge 2](images/hardware-challenge-2.png)](https://youtu.be/lya-ddb5DFg)
-
 ---
 
-## ⚙️ Hardware Challenge #3: Proportional Control (P-Controller)
+## ⚙️ #3: Proportional Control (P-Controller)
 
 The core logic for line following is based on a simple **P-Controller**.
 
@@ -94,9 +88,6 @@ The core logic for line following is based on a simple **P-Controller**.
 - **Integral** term is not required due to negligible drift  
 - **Derivative** term is not required since oscillations are minimal  
 - Simple P-control is sufficient to keep the robot stable and responsive
-
-📽️ **Video Demonstration:**  
-[![Hardware Challenge 3](images/hardware-challenge-3.png)](https://youtu.be/DaOiyH9NtPE)
 
 ---
 
